@@ -18,7 +18,7 @@
     //About Myself
     echo "<p>I am a Statistics student in the University of Lagos.<br>
             I am a creative individual with skills i software development.
-            My hobbies are reading books, coding and travelling.</p>"
+            My hobbies are reading books, coding and travelling. </p>"
     
 ?>
 
