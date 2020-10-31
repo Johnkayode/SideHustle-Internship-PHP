@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 30, 2020 at 04:31 PM
+-- Generation Time: Oct 31, 2020 at 08:27 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.2.34
 
@@ -32,17 +32,19 @@ CREATE TABLE `biodata` (
   `name` varchar(100) NOT NULL,
   `age` int(3) NOT NULL,
   `username` varchar(50) NOT NULL,
-  `address` varchar(500) NOT NULL
+  `address` varchar(500) NOT NULL,
+  `image_name` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `biodata`
 --
 
-INSERT INTO `biodata` (`id`, `name`, `age`, `username`, `address`) VALUES
-(2, 'Jacqueline', 18, 'jacklean', 'Peckham, South London'),
-(3, 'John Shodipo', 19, 'nerdthejohn', '14 Hugh Close, Lagos'),
-(4, 'Akpoyoyo Theresa', 21, 'therese_xx', 'Accra Ghana');
+INSERT INTO `biodata` (`id`, `name`, `age`, `username`, `address`, `image_name`) VALUES
+(2, 'Jacqueline', 18, 'jacklean', 'Peckham, South London', 'biodata-44295.jpg'),
+(3, 'John Shodipo', 19, 'nerdthejohn', '14 Hugh Close, Lagos', 'biodata-51580.jpg'),
+(4, 'Akpoyoyo Theresa', 21, 'therese_xx', 'Accra Ghana', 'biodata-55017.jpg'),
+(5, 'Curie Marie', 20, 'cakecurie', 'Nottingham, East Midlands England', 'biodata-66253.png');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +64,7 @@ ALTER TABLE `biodata`
 -- AUTO_INCREMENT for table `biodata`
 --
 ALTER TABLE `biodata`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

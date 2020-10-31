@@ -9,6 +9,7 @@
         $age = $rec['age'];
         $username = $rec['username'];
         $address = $rec['address'];
+        $photo = $rec['image_name'];
     }
 
 
@@ -42,6 +43,7 @@
                 <th>Age</th>
                 <th>Username</th>
                 <th>Address</th>
+                <th>Photo</th>
                 <th colspan='2'>Action</th>
             </tr>
         </thead>
@@ -55,6 +57,7 @@
                         <td><?php  echo $row['age'];   ?></td>
                         <td><?php  echo $row['username'];   ?></td>
                         <td><?php  echo $row['address'];   ?></td>
+                        <td><img src= '<?php echo 'photos/'.$row['image_name']; ?>' height='40px' width='40px'> </td>
                         <td>
                             <a href='crud.php?edit=<?php echo $row['id']; ?>'  class='edit'>Edit</a>
                         </td>
@@ -66,7 +69,7 @@
             
     </table>
 
-    <form method='POST' action='server.php'>
+    <form method='POST' action='server.php' enctype='multipart/form-data'>
         <input type='hidden' name='id' value='<?php echo $id; ?>'>
         <div class='input-group'>
             <label>Name</label>
@@ -83,6 +86,10 @@
         <div class='input-group'>
             <label>Address</label>
             <input type='text' name='address'  value='<?php echo $address; ?>'>
+        </div>
+        <div class='input-group'>
+            <label>Photo</label>
+            <input type='file' name='photo'  src='<?php echo 'photos/'.$photo; ?>'>
         </div>
         <div class='input-group'>
             <?php if($edit_state == false): ?>
